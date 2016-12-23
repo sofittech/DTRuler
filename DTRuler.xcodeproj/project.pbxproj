@@ -14,33 +14,8 @@
 		40B4A0641E0BB96C005051A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B4A0631E0BB96C005051A0 /* Assets.xcassets */; };
 		40B4A0671E0BB96C005051A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B4A0651E0BB96C005051A0 /* LaunchScreen.storyboard */; };
 		40B4A06D1E0BBCFB005051A0 /* DTRuler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B4A06C1E0BBCFB005051A0 /* DTRuler.swift */; };
-		40B4A09E1E0BD4DF005051A0 /* DTRuler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B4A0481E0BB696005051A0 /* DTRuler.framework */; };
-		40FC7AC21E0D1153003BB2AA /* DTRuler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40B4A0481E0BB696005051A0 /* DTRuler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40FC7AC61E0D2F4D003BB2AA /* DTRuler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B4A0481E0BB696005051A0 /* DTRuler.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		40FC7AC31E0D1153003BB2AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 40B4A03D1E0BB655005051A0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40B4A0471E0BB696005051A0;
-			remoteInfo = "DTRuler iOS";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		40FC7AC51E0D1153003BB2AA /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				40FC7AC21E0D1153003BB2AA /* DTRuler.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		40B4A0481E0BB696005051A0 /* DTRuler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTRuler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B4A09E1E0BD4DF005051A0 /* DTRuler.framework in Frameworks */,
+				40FC7AC61E0D2F4D003BB2AA /* DTRuler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,12 +130,10 @@
 				40B4A0561E0BB96C005051A0 /* Sources */,
 				40B4A0571E0BB96C005051A0 /* Frameworks */,
 				40B4A0581E0BB96C005051A0 /* Resources */,
-				40FC7AC51E0D1153003BB2AA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				40FC7AC41E0D1153003BB2AA /* PBXTargetDependency */,
 			);
 			name = "DTRuler iOS Example";
 			productName = "DTRuler iOS Example";
@@ -247,14 +220,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		40FC7AC41E0D1153003BB2AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 40B4A0471E0BB696005051A0 /* DTRuler iOS */;
-			targetProxy = 40FC7AC31E0D1153003BB2AA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		40B4A0601E0BB96C005051A0 /* Main.storyboard */ = {
@@ -416,7 +381,6 @@
 		40B4A06A1E0BB96C005051A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -473,7 +437,6 @@
 		40B4A06B1E0BB96C005051A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
