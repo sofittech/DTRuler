@@ -8,7 +8,7 @@ Simple ruler input control.
 
 ### Requirement
 
-iOS 8+
+iOS 8.4+
 
 ### [CocoaPods](http://cocoapods.org)
 

@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.authors = { "Dan Jiang" => 'dan@danthought.com' }
   spec.social_media_url = "http://twitter.com/dtstudio"
 
-  spec.platform = :ios, "8.0"
+  spec.platform = :ios, "8.4"
   spec.requires_arc = true
   spec.source = { git: "https://github.com/danjiang/DTRuler.git", tag: spec.version, submodules: true }
   spec.source_files = "Sources/**/*.{h,swift}"
