@@ -1,3 +1,10 @@
+# DTRuler
+
+[![Swift](https://img.shields.io/badge/Swift-3.0-ff3f26.svg?style=flat)](https://swift.org/)
+[![Platform](https://img.shields.io/cocoapods/p/DTRuler.svg?style=flat)](http://cocoadocs.org/docsets/DTRuler)
+[![CocoaPods](http://img.shields.io/cocoapods/v/DTRuler.svg)](https://cocoapods.org/pods/DTRuler)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 ## Introduction
 
 Simple ruler input control.
@@ -43,11 +50,11 @@ import DTRuler
 ```swift
 // Float with step as 0.1
 let scale = 78.9
-let ruler = DTRuler(scale: .float(scale), minScale: .float(9), maxScale: .float(999))
+let ruler = DTRuler(scale: .float(scale), minScale: .float(9), maxScale: .float(999), width: view.bounds.width - 50)
 
 // or Integer with step as 1
 let scale = 59
-let ruler = DTRuler(scale: .integer(scale), minScale: .integer(10), maxScale: .integer(100))
+let ruler = DTRuler(scale: .integer(scale), minScale: .integer(10), maxScale: .integer(100), width: view.bounds.width - 50)
 
 ruler.delegate = self
 

@@ -144,12 +144,12 @@ public class DTRuler: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
-  public init(scale: Scale, minScale: Scale, maxScale: Scale) {
+  public init(scale: Scale, minScale: Scale, maxScale: Scale, width: CGFloat) {
     super.init(frame: .zero)
     
     // TODO: Validate Scales
     
-    layoutRuler(with: scale, minScale, maxScale)
+    layoutRuler(with: scale, minScale, maxScale, width)
     layoutPointer()
   }
   
@@ -173,8 +173,8 @@ public class DTRuler: UIView {
     addConstraints([top, centerX])
   }
   
-  private func layoutRuler(with scale: Scale, _ minScale: Scale, _ maxScale: Scale) {
-    let ruler = Ruler(minorScale: scale, minMajorScale: minScale, maxMajorScale: maxScale)
+  private func layoutRuler(with scale: Scale, _ minScale: Scale, _ maxScale: Scale, _ width: CGFloat) {
+    let ruler = Ruler(minorScale: scale, minMajorScale: minScale, maxMajorScale: maxScale, width: width)
     ruler.rulerDelegate = self
     
     addSubview(ruler)
@@ -227,7 +227,7 @@ class Ruler: UIScrollView, UIScrollViewDelegate {
     fatalError("init(coder:) has not been implemented")
   }
   
-  init(minorScale: DTRuler.Scale, minMajorScale: DTRuler.Scale, maxMajorScale: DTRuler.Scale) {
+  init(minorScale: DTRuler.Scale, minMajorScale: DTRuler.Scale, maxMajorScale: DTRuler.Scale, width: CGFloat) {
     self.minMajorScale = minMajorScale
     self.maxMajorScale = maxMajorScale
     
@@ -260,8 +260,7 @@ class Ruler: UIScrollView, UIScrollViewDelegate {
       majorScale = majorScale.next()
     }
     
-    // TODO: Flexible Ruler Width
-    var startX = UIScreen.main.bounds.midX - RulerBlock.gap / 2 // point to middle ruler block`s first scale
+    var startX = width / 2 - RulerBlock.gap / 2 // point to middle ruler block`s first scale
     startX -= CGFloat(offsetGapNumber) * RulerBlock.gap // first scale with right gap offset
     
     let indexs = [0, -1, -2, -3, 1, 2, 3]

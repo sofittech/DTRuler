@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     DTRuler.theme = Colorful()
     
-    let ruler = DTRuler(scale: .integer(scale), minScale: .integer(10), maxScale: .integer(100))
+    let ruler = DTRuler(scale: .integer(scale), minScale: .integer(10), maxScale: .integer(100), width: view.bounds.width - 50)
     ruler.delegate = self
     
     view.addSubview(ruler)
@@ -36,8 +36,8 @@ class ViewController: UIViewController {
     ruler.translatesAutoresizingMaskIntoConstraints = false
     
     let bottom = NSLayoutConstraint(item: ruler, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
-    let leading = NSLayoutConstraint(item: ruler, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0)
-    let trailing = NSLayoutConstraint(item: ruler, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0)
+    let leading = NSLayoutConstraint(item: ruler, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 25)
+    let trailing = NSLayoutConstraint(item: ruler, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: -25)
     
     view.addConstraints([bottom, leading, trailing])
   }
