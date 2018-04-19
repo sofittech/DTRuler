@@ -1,6 +1,6 @@
 # DTRuler
 
-[![Swift](https://img.shields.io/badge/Swift-3.0-ff3f26.svg?style=flat)](https://swift.org/)
+[![Swift](https://img.shields.io/badge/Swift-4.0-ff3f26.svg?style=flat)](https://swift.org/)
 [![Platform](https://img.shields.io/cocoapods/p/DTRuler.svg?style=flat)](http://cocoadocs.org/docsets/DTRuler)
 [![CocoaPods](http://img.shields.io/cocoapods/v/DTRuler.svg)](https://cocoapods.org/pods/DTRuler)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
