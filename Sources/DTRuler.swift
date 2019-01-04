@@ -141,9 +141,11 @@ public class DTRuler: UIView {
   public var delegate: DTRulerDelegate?
   
   required public init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+//    fatalError("init(coder:) has not been implemented")
+    super.init(coder: aDecoder)
   }
 
+   
   public init(scale: Scale, minScale: Scale, maxScale: Scale, width: CGFloat) {
     super.init(frame: .zero)
         
